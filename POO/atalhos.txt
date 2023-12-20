@@ -1,0 +1,3 @@
+CTRL + L = Abre a barra de pesquisa de URL
+CTRL + T = Abre uma nova aba no navegador
+

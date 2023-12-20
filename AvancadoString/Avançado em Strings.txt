@@ -1,0 +1,200 @@
+Limpando String
+
+trim - Limpa espaços antes e depois da string
+
+ltrim - Limpa a parte inicial da string 
+
+rtrim - limpa espaços da parte final da string
+
+escopo = trim($str);
+
+==================================================
+
+Alterando case
+
+strtolower - todas as letras minúsculas;
+
+strtoupper - todas as letras maiúsculas;
+
+escopo = strtolower($str);
+
+==================================================
+
+Alterando o case das palavras
+
+ucfirst - Primeira letra da string em maiúscula;
+
+ucwords - primeira letra de cada palavra em maiuscula;
+
+==================================================
+
+Removendo Tags HTML
+
+strip_tags
+
+$TextoHtml = "<p>Olá Mundo</p>";
+
+print(strip_tags(TextoHtml));
+
+Será impresso somente:
+
+Olá Mundo
+
+==================================================
+
+Resgatando uma parte da String
+
+$str = "Gustavo Moisés silva Inácio Santos";
+
+    $Meu = substr($str, 8, 7); // Variavel, Local de coleta, Fim.
+
+    echo $str . "<br>";
+
+    echo $Meu;
+	
+Como vai ser impresso:
+
+Gustavo Moisés silva Inácio Santos
+Moisés
+
+==================================================
+
+Invertendo uma string
+
+    $str = "Cade o meu queijo?";
+
+    $Reverso = strrev($str);
+
+    echo $str . "<br>";
+
+    echo $Reverso;
+	
+Como vai ser Impresso:
+
+Cade o meu queijo?
+?ojieuq uem o edaC
+
+==================================================
+
+Repetindo uma String
+
+	$str = "Cade o meu queijo? <br>";
+
+    $Repeticao = str_repeat($str , 2); //Variavel, Quantidade de Repetições
+    
+    echo $Repeticao;
+	
+Como vai ser Impresso:
+
+Cade o meu queijo?
+Cade o meu queijo?
+
+==================================================
+
+Tranformando uma string em array
+
+$str = "Cade o meu queijo?";
+
+    $ArrayExplode = explode(" " , $str); //Separador, String
+
+    print_r($ArrayExplode);
+	
+Como vai ser impresso:
+
+Array ( [0] => Cade [1] => o [2] => meu [3] => queijo? )
+
+==================================================
+
+Tranformando um Array em String
+
+    $Array = ["O", "PHP", "é", "muito", "legal"];
+
+    $str = implode(" ", $Array);
+
+    echo $str;
+	
+Como vai ser impresso:
+
+O PHP é muito legal
+
+==================================================
+
+Encontrando a primeira ocorrencia
+
+Com a função strpos() podemos encontrar algum texto na string
+
+Se recebermos algum valor é que o texto foi encontrado, e este valor é 
+o indice inicial
+
+Se for retornado false o texto não está na string
+
+    $Texto = "O Gustavo é muito legal!";
+
+    $Localizador = strpos($Texto, "O");
+
+    echo $Localizador;
+
+Como vai ser impresso:
+
+0(A casa que se encontra a procura é de numero 0)
+
+==================================================
+
+Encontrando a ultima ocorrencia
+
+Com a função strrpos() podemos a ultima ocorrencia de um texto na string
+
+Se recebermos algum valor é que foi encontrado, e este valor é de índice inicial
+
+Se for retornado false, o texto não está na string
+
+    $Texto = "O Gustavo é muito legal! O";
+
+    $Localizador = strrpos($Texto, "O");
+
+    echo $Localizador;
+	
+Como vai ser impresso:
+
+26(Ele vai procurar a ultima com o resultado porem não procura de trás para frente)
+
+==================================================
+
+Retornando o resto da string
+
+Com a função strstr() podemos encontrar um texto na string
+
+se algo for encontrado, a função vai retornar o resto da string após o texto encontrado
+
+Se não encontrar nada retorna false
+
+    $Texto = "O Gustavo é muito legal!";
+
+    $Localizador = strstr($Texto, "muito");
+
+    echo $Localizador;
+	
+como vai ser impresso:
+
+muito legal!
+
+==================================================
+
+Decompondo URL
+
+Com a função Parse_url podemos decompor uma url
+
+Vamos receber um array com todas as partes que o URL tem
+
+Alguns elementos que podem ser retornados são: Protocolo, Host, parametros
+
+	$Url = "https://www.google.com";
+
+	$ArrayUrl = parse_url($Url);
+
+	print_r($ArrayUrl);
+
+Como vai ser impresso:
+
+Array ([scheme] => https [host] => www.google.com)  
+
